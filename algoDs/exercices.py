@@ -24,3 +24,37 @@ def noSpace(x):
             word = word + char
     return word
 noSpace("Hello wolrd")
+### STRINGS
+## reverse a string
+def solution(string):
+    return string[::-1]
+## check string ending with a function
+def solution(text, ending):
+    return text.endswith(ending)
+## concatenation
+def bonus_time(salary, bonus):
+    figure = 0
+    if bonus == True :
+        figure = salary * 10
+        return "$" + str(figure)
+    else :
+        return "$" + str(salary)
+## abrreveiate
+def abbrev_name(name):
+    abv = ""
+    abv = abv + name[0]
+    for x in range(len(name)) :
+        if name[x] == " ":
+            abv = abv + "." + name[x+1]
+        else:
+            continue
+    return abv.upper()
+## turn DNA into RNA 
+def dna_to_rna(dna):
+    rna = ""
+    for x in dna :
+        if x == "T":
+            rna = rna + "U"
+        else :
+            rna = rna + x
+    return rna
