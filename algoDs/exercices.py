@@ -6,16 +6,13 @@ def make_negative( number ):
     else :
         return number
 make_negative(-12)
-
 # the abs function gives the absolute value of a number
 def makeNegative(num):
     return -abs(num)
 makeNegative(42)
-
 ## remove the first and last charachter from string
 def remove_char(s):
     return s[1:-1]
-
 ## remove spaces in the string 
 def noSpace(x):
     word = ""
@@ -24,6 +21,8 @@ def noSpace(x):
             word = word + char
     return word
 noSpace("Hello wolrd")
+
+
 ### STRINGS
 ## reverse a string
 def solution(string):
@@ -58,3 +57,38 @@ def dna_to_rna(dna):
         else :
             rna = rna + x
     return rna
+
+
+### Arrays
+## counting specific elements in a list
+def count_sheeps(sheep):
+    count = 0
+    for x in sheep:
+        if x == True:
+            count += 1
+        else :
+            continue
+    return count
+## turn array of numbers into binary
+# first one nut completed using functions
+def binary_array_to_number(arr):
+    zero = "0o"
+    one = "0b"
+    if arr[0] == 1 :
+        for x in arr :
+            one = one + x
+            print(one)
+    else :
+        for y in arr :
+            zero = zero + y
+            print(zero)
+binary_array_to_number([0, 0, 0, 1])
+# second one using based math
+def binary_array_to_number(arr):
+    total = 0
+    i = 1
+    for num in arr[::-1]:
+        total += (i*num)
+        i *= 2
+    return total
+binary_array_to_number([1, 1, 1, 1])
