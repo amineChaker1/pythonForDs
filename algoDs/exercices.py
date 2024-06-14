@@ -92,3 +92,30 @@ def binary_array_to_number(arr):
         i *= 2
     return total
 binary_array_to_number([1, 1, 1, 1])
+## needle in haystack 
+def find_needle(haystack):
+    index = 0
+    for x in haystack :
+        if x == "needle":
+            return f"found the needle at position {index}"
+        index += 1
+## remove the smallest number even if it repeats
+def remove_smallest(numbers):
+    com = numbers.copy()
+    if len(com) == 0 :
+        return com
+    else :
+        min = com[0]
+        for x in com :
+            if x < min :
+                min = x
+        index = com.index(min)
+        del com[index]
+        return com
+## Convert number to reversed array of digits
+def digitize(n):
+    res = []
+    s = str(n)
+    for x in s[::-1]:
+        res.append(int(x))
+    return res
